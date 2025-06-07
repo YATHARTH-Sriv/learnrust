@@ -1,4 +1,4 @@
-# Things Learned In this first chapter:
+# Things Learned In this second chapter:
 
 ## Prelude
 
