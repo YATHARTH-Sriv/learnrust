@@ -1,84 +1,117 @@
-## Stack and Heap Memory
+# 🧠 Things Learned In Chapter 4: Ownership and Memory in Rust
 
-    Stack Memory less compute power used faster efficient 
+---
 
-    Heap Memory More Compute Less Efficient String Vectors 
+## 🪜 Stack and Heap Memory
 
-    LIFO
+* **Stack Memory**: Fast, efficient, uses LIFO (Last In First Out)
+* **Heap Memory**: Slower, used for types like `String`, `Vec`
+* Rust replaces garbage collection with the **ownership model** to manage memory efficiently.
 
-    Garbage Allocater and in other languages you have to do the problem ownership solves
+---
+
+## 🧵 Ownership Rules
+
+![Ownership Rules](image.png)
+
+---
+
+## ✨ Literals vs `String::from("...")`
+
+```rust
+let s = "hello";                // Stored on Stack
+let s = String::from("hello");  // Stored on Heap
+```
+
+---
+
+## 🔄 Shallow Copy
+
+![Shallow Copy](image-1.png)
+
+---
+
+## ⚡ Move Semantics (Not Shallow Copy)
+
+![Move Semantics](image-2.png)
+
+---
+
+## 🔧 Deep Copy with `clone()`
+
+![Deep Copy](image-3.png)
+
+---
+
+## ✔️ Copy Trait
+
+![Copy Trait](image-4.png)
+
+---
+
+## 🤨 Clone Trait
+
+![Clone Trait](image-5.png)
+
+> The `Copy` trait is for types stored **only on the stack**.
+
+---
+
+## 🧱 Stack-Only Types Implement `Copy`
+
+![Stack-Only Copy Types](image-6.png)
+
+---
+
+## 📌 References Without Ownership Transfer
+
+* One **mutable** reference allowed
+* Multiple **immutable** references allowed
+
+![References](image-7.png)
+
+---
+
+## 💧 Mutable Referencing
+
+```rust
+let mut x = String::from("hello");
+
+let r1 = &x;       // Immutable reference
+let r2 = &mut x;   // Mutable reference ❌ Not allowed with r1
+```
+
+---
+
+## ⚠️ Dangling Pointers Prevention
+
+Rust prevents dangling pointers at **compile time**.
+
+![Dangling Pointers](image-8.png)
+
+---
+
+## 📃 `.as_bytes()` and Byte Literals
+
+```rust
+let s = String::from("hello");
+let bytes = s.as_bytes(); // &[u8]
+
+let space = b' ';         // byte literal, value: 32
+```
+
+![Byte Details](image-9.png)
+![Byte Logic](image-10.png)
+
+---
+
+## 📂 String Slices
+
+* Use slices to work with **parts** of a `String`
+* Avoids unnecessary cloning
+
+![String Slices](image-11.png)
+
+---
 
 
-## Ownership Rules 
-
-![alt text](image.png)
-
-## Literal and String::from("")
-
-    let s="hello" // This is on Stack Memory
-
-    let s=String::from("Hello")  // On Heap
-
-
-## Shallow Copy 
-
-![alt text](image-1.png)
-
-# Move Rather Than Shallow Copy
-
-![alt text](image-2.png)
-
-# Deep Copy
-
-![alt text](image-3.png)
-
-
-# Copy Trait
-
-![alt text](image-4.png)
-
-# Clone Trait
-
-![alt text](image-5.png)
-
-# Copy Trait is For Only For Stack Memory Data Types
-
-![alt text](image-6.png)
-
-
-
-# Without Transferring ownership Referencing
-
-One mutable reference then no more refernce possible
-Multiple Immutable reference possible
-
-![alt text](image-7.png)
-
-# Mutable Referencing
-
-    let mut x= String::from("hello")
-
-    let r1= &x --------> Immutable Reference
-    let r2= &mut x -----------> Mutable Reference 
-
-# Dangling Pointers
-
-![alt text](image-8.png)
-
-
-# S.as_bytes(); .as_bytes
-
-    .as_bytes()
-    
-    This converts a String (or &str) into a byte slice: &[u8].
-
-    b' ' is a byte literal (u8), value 32
-
-![alt text](image-9.png)
-
-
-![alt text](image-10.png)
-
-# String Slices
-
-![alt text](image-11.png)

@@ -1,47 +1,89 @@
-# Things Learned In this second chapter:
+# 📘 Things Learned In Chapter 2: Rust Essentials
 
-## Prelude
+---
 
-    basically it bring all the imports of library to be accesible
-    eg: use tokio::prelude::*
+## ✨ Prelude in Rust
 
+> **What is a Prelude?**
 
-## Refernce 
+Rust prelude brings commonly used items into scope automatically so you don’t have to import them explicitly every time.
 
-    Rust uses references (&) to allow one piece of code to access data without taking ownership.
+```rust
+use tokio::prelude::*; // Brings all prelude traits and functions into scope
+```
 
+---
 
-## mutability
+## 🧭 References
 
-     let mut x = 5;
-     x = 6; // ✅ Works!
+Rust uses **references** (`&`) to let code access data **without taking ownership**:
 
+```rust
+let s1 = String::from("hello");
+let len = calculate_length(&s1);
+```
 
-## Binary and library
-  Rust projects can be either:
+---
 
-        📦 Binary Crate
-        Contains a main() function.
+## 🔁 Mutability
 
-        Compiles to an executable.
+```rust
+let mut x = 5;
+x = 6; // ✅ Works!
+```
 
-        Created with: cargo new my_app
+> Variables are immutable by default. Use `mut` to allow mutation.
 
+---
 
-        📚 Library Crate
-        No main() function.
+## 🛠️ Binary vs Library Crates
 
-        Intended for reuse across projects.
+Rust projects can be either of the following:
 
-        Created with: cargo new my_utils --lib
+### 📦 Binary Crate
 
+* Contains a `main()` function.
+* Compiles to an executable.
+* Created with:
 
-## For Every Create or dependicney docs
+```bash
+cargo new my_app
+```
 
-    cargo doc --open
+### 📚 Library Crate
 
-## Shadowing
+* No `main()` function.
+* Meant to be reused across projects.
+* Created with:
 
-    Shadowing means you can declare a new variable with the same name as an existing one using let.
+```bash
+cargo new my_utils --lib
+```
 
-    This new variable shadows (hides) the old one, effectively replacing it in that scope.
+---
+
+## 📄 Documentation on Crates
+
+Generate and view docs for your crate and its dependencies:
+
+```bash
+cargo doc --open
+```
+
+> 📚 Opens beautiful HTML documentation in your browser.
+
+---
+
+## 🌀 Shadowing
+
+Shadowing lets you redeclare a variable with the same name:
+
+```rust
+let x = 5;
+let x = x + 1; // Shadows previous x
+```
+
+> 🌟 Unlike `mut`, shadowing creates a **new variable**, not changing the original.
+
+---
+
