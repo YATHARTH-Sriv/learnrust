@@ -15,5 +15,7 @@ I'll mark chapters as I complete them ✅ and jot down things I should take care
 
 - [x] **Chapter 4 – Ownership**
 
-- [ ] **Chapter 5 – Structs and Methods**
+- [x] **Chapter 5 – Structs and Methods**
+
+- [ ] **Chapter 6 – Enums And Pattern Matching**
 
