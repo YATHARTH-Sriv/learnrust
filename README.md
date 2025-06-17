@@ -17,5 +17,7 @@ I'll mark chapters as I complete them ✅ and jot down things I should take care
 
 - [x] **Chapter 5 – Structs and Methods**
 
-- [ ] **Chapter 6 – Enums And Pattern Matching**
+- [x] **Chapter 6 – Enums And Pattern Matching**
+
+- [ ] **Chapter 7 – Managing Growing Projects**
 
