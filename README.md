@@ -23,4 +23,6 @@ I'll mark chapters as I complete them ✅ and jot down things I should take care
 
 - [x] **Chapter 8 – Common Collections**
 
-- [ ] **Chapter 9 – Error Handling**
+- [x] **Chapter 9 – Error Handling**
+
+- [x] **Chapter 10 – Generic, Traits, Lifetimes**
