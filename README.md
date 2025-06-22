@@ -1,7 +1,7 @@
 # 📚 Tracking My *Rust Book* Progress
 
 This is a personal tracker to follow along with [*The Rust Programming Language*](https://doc.rust-lang.org/book/).  
-I'll mark chapters as I complete them ✅ and jot down things I should take care of or revisit.  
+Completed Chapters Are Marked ✅ Every Chapter also has a learn.md file for key points as per my understanding of that chapter 
 
 ---
 
@@ -26,3 +26,5 @@ I'll mark chapters as I complete them ✅ and jot down things I should take care
 - [x] **Chapter 9 – Error Handling**
 
 - [x] **Chapter 10 – Generic, Traits, Lifetimes**
+
+- [ ] **Chapter 11 – Writing Tests**
