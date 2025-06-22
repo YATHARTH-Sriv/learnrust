@@ -27,4 +27,6 @@ Completed Chapters Are Marked ✅ Every Chapter also has a learn.md file for key
 
 - [x] **Chapter 10 – Generic, Traits, Lifetimes**
 
-- [ ] **Chapter 11 – Writing Tests**
+- [x] **Chapter 11 – Writing Tests**
+
+- [ ] **Chapter 12 – Building A Command Line**
