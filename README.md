@@ -30,3 +30,5 @@ Completed Chapters Are Marked ✅ Every Chapter also has a learn.md file for key
 - [x] **Chapter 11 – Writing Tests**
 
 - [ ] **Chapter 12 – Building A Command Line**
+
+- [x] **Chapter 13 – Iterators And Closures**
