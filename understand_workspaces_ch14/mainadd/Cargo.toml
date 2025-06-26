@@ -1,0 +1,8 @@
+[package]
+name = "mainadd"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+add_one = { path = "../add_one" }
+
