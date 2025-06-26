@@ -32,3 +32,9 @@ Completed Chapters Are Marked ✅ Every Chapter also has a learn.md file for key
 - [ ] **Chapter 12 – Building A Command Line**
 
 - [x] **Chapter 13 – Iterators And Closures**
+
+- [x] **Chapter 14 – More About Crates**
+
+- [ ] **Chapter 15 – Smart Pointers**
+
+
