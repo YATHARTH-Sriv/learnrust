@@ -19,3 +19,5 @@ Cargo.lock
 
 # Environment variables
 .env
+
+# PORT=$PORT cargo run --release
