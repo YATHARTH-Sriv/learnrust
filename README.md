@@ -37,4 +37,14 @@ Completed Chapters Are Marked ✅ Every Chapter also has a learn.md file for key
 
 - [ ] **Chapter 15 – Smart Pointers**
 
+- [ ] **Chapter 16 – Concurreny** ( Need TO GO MORE IN DETAIL)
+
+- [ ] **Chapter 17 – Async** ( Need TO GO MORE IN DETAIL)
+
+- [x] **Chapter 18 – OOPs**
+
+- [x] **Chapter 19 – Pattern Matching**
+
+- [ ] **Chapter 20 – Advanced**
+
 
